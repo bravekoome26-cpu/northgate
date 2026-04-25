@@ -1,22 +1,22 @@
 {% extends 'core/base.html' %}
 {% block title %}Contact Northgate Resort Isiolo{% endblock %}
 {% block content %}
-<section style="padding: 5rem 0;">
-  <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+<section class="contact-header">
+  <div class="contact-header-container">
     <div class="section-label">Contact</div>
     <h1 class="section-title">Let's make your stay easy.</h1>
-    <p class="section-body" style="margin-top:1.5rem; max-width:760px; margin-left:auto; margin-right:auto;">
+    <p class="section-body" class="contact-header-text">
       Reach out to our reservations team for room bookings, event enquiries, or planning support for experiences and transport from Isiolo International Airport.
     </p>
   </div>
 </section>
 
-<section class="location-inner" style="padding: 4rem 0; gap: 3rem;">
+<section class="location-inner" class="location-section">
   <div>
     <div class="section-label">Find Us</div>
     <h2 class="section-title">Northgate Resort Isiolo</h2>
-    <p class="section-body" style="margin-top:1.2rem;">Airport Road, Isiolo · Opposite Isiolo International Airport<br>2 km from Isiolo town centre · Accessible via tarmac road.</p>
-    <ul class="nearby-list" style="margin-top:2rem;">
+    <p class="section-body" class="location-address">Airport Road, Isiolo · Opposite Isiolo International Airport<br>2 km from Isiolo town centre · Accessible via tarmac road.</p>
+    <ul class="nearby-list" class="nearby-list-container">
       <li><span>Isiolo International Airport</span><span>Adjacent</span></li>
       <li><span>Samburu National Reserve</span><span>30 km</span></li>
       <li><span>Ngare Ndare Forest</span><span>28 km</span></li>
@@ -26,7 +26,7 @@
   <div>
     <div class="section-label">Get in Touch</div>
     <h2 class="section-title">Talk to our team</h2>
-    <div class="contact-cards" style="margin-top:2rem;">
+    <div class="contact-cards" class="nearby-list-container">
       <div class="contact-card">
         <div class="contact-icon">📞</div>
         <div>
@@ -59,7 +59,7 @@
   </div>
 </section>
 
-<section style="padding: 3rem 0; text-align:center;">
+<section class="cta-section">
   <a href="{% url 'table_reservation' %}" class="btn-primary">Reserve a table or event today</a>
 </section>
 {% endblock %}

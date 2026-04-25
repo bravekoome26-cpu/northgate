@@ -1,25 +1,25 @@
 {% extends 'core/base.html' %}
 {% block title %}Register · Northgate Resort Isiolo{% endblock %}
 {% block content %}
-<section style="padding: 5rem 0;">
-  <div style="max-width: 560px; margin: 0 auto;">
+<section class="login-section">
+  <div class="form-card-wide">
     <div class="content-panel form-card">
-      <div class="page-header" style="margin-bottom:1.5rem;">
-        <h1 class="section-title" style="font-size: clamp(2rem, 4vw, 2.6rem);">Create your guest account</h1>
-        <p class="section-body" style="margin-top:1rem;">Register now to manage bookings, dining orders and table reservations.</p>
+      <div class="page-header">
+        <h1 class="section-title login-title">Create your guest account</h1>
+        <p class="section-body form-body-intro">Register now to manage bookings, dining orders and table reservations.</p>
       </div>
       <form method="post" novalidate>
         {% csrf_token %}
         {{ form.non_field_errors }}
-        <div style="margin-bottom:1rem;">{{ form.username.label_tag }}<br>{{ form.username }}</div>
-        <div style="margin-bottom:1rem;">{{ form.email.label_tag }}<br>{{ form.email }}</div>
-        <div style="margin-bottom:1rem;">{{ form.first_name.label_tag }}<br>{{ form.first_name }}</div>
-        <div style="margin-bottom:1rem;">{{ form.last_name.label_tag }}<br>{{ form.last_name }}</div>
-        <div style="margin-bottom:1rem;">{{ form.password1.label_tag }}<br>{{ form.password1 }}</div>
-        <div style="margin-bottom:1.5rem;">{{ form.password2.label_tag }}<br>{{ form.password2 }}</div>
-        <button class="btn-primary" type="submit" style="width:100%;">Register</button>
+        <div class="form-field">{{ form.username.label_tag }}<br>{{ form.username }}</div>
+        <div class="form-field">{{ form.email.label_tag }}<br>{{ form.email }}</div>
+        <div class="form-field">{{ form.first_name.label_tag }}<br>{{ form.first_name }}</div>
+        <div class="form-field">{{ form.last_name.label_tag }}<br>{{ form.last_name }}</div>
+        <div class="form-field">{{ form.password1.label_tag }}<br>{{ form.password1 }}</div>
+        <div class="form-field form-field-final">{{ form.password2.label_tag }}<br>{{ form.password2 }}</div>
+        <button class="btn-primary form-submit" type="submit">Register</button>
       </form>
-      <p style="margin-top:1.4rem; text-align:center; color:#5a4d42;">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+      <p class="form-redirect">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
     </div>
   </div>
 </section>

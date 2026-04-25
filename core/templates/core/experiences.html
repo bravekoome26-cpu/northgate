@@ -1,18 +1,18 @@
 {% extends 'core/base.html' %}
 {% block title %}Experiences at Northgate Resort — Adventure & Relaxation{% endblock %}
 {% block content %}
-<section style="padding: 5rem 0;">
-  <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+<section class="events-header">
+  <div class="exp-header-container">
     <div class="section-label">Experiences</div>
     <h1 class="section-title">Connect with nature, culture and comfort.</h1>
-    <p class="section-body" style="margin-top: 1.5rem; max-width: 760px; margin-left:auto; margin-right:auto;">
+    <p class="section-body" class="exp-header-text">
       From tranquil mornings beside the pool to unforgettable safari journeys, Northgate Resort offers a range of experiences designed to bring the best of Northern Kenya within easy reach.
     </p>
   </div>
 </section>
 
-<section class="exp-inner" style="padding: 4rem 0;">
-  <div style="display:grid; gap: 2rem;">
+<section class="exp-inner" class="events-grid-section">
+  <div class="exp-activities-grid">
     <div class="exp-card">
       <span class="exp-icon">🦁</span>
       <h3 class="exp-card-title">Guided Game Drives</h3>
@@ -52,33 +52,33 @@
   </div>
 </section>
 
-<section style="padding: 4rem 0; background: rgba(232,185,106,0.08);">
-  <div style="max-width:1100px;margin:0 auto; display:grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+<section class="exp-lower-section">
+  <div class="exp-lower-container">
     <div>
       <div class="section-label">Custom Journeys</div>
       <h2 class="section-title">Create your own Northern Kenya adventure.</h2>
-      <p class="section-body" style="margin-top:1.5rem;">
+      <p class="section-body" class="exp-text-col">
         We can arrange everything from private safari routes and cultural visits to personalised spa escapes and photography days. Tell us what you want to experience and we will help plan it.
       </p>
     </div>
-    <div style="display:grid; gap: 1rem;">
-      <div style="background: var(--cream); padding: 1.5rem; border-radius: 1.2rem;">
+    <div class="exp-benefits-grid">
+      <div class="benefit-box">
         <strong>Reserve a private safari</strong>
-        <p style="margin:0.8rem 0 0; color:#5a4d42;">Small-group departure to the region's best wildlife parks with a trusted local guide.</p>
+        <p class="benefit-box-text">Small-group departure to the region's best wildlife parks with a trusted local guide.</p>
       </div>
-      <div style="background: var(--cream); padding: 1.5rem; border-radius: 1.2rem;">
+      <div class="benefit-box">
         <strong>Culture & community trips</strong>
-        <p style="margin:0.8rem 0 0; color:#5a4d42;">Visit local towns, markets and conservancies to connect with northern Kenya's rich culture.</p>
+        <p class="benefit-box-text">Visit local towns, markets and conservancies to connect with northern Kenya's rich culture.</p>
       </div>
-      <div style="background: var(--cream); padding: 1.5rem; border-radius: 1.2rem;">
+      <div class="benefit-box">
         <strong>Wellness time</strong>
-        <p style="margin:0.8rem 0 0; color:#5a4d42;">Relax in our gardens and pool, or enjoy gentle guided walks to reset after travel.</p>
+        <p class="benefit-box-text">Relax in our gardens and pool, or enjoy gentle guided walks to reset after travel.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section style="padding: 3rem 0; text-align:center;">
+<section class="exp-cta-section">
   <a href="{% url 'contact' %}" class="btn-primary">Contact us to book an experience</a>
 </section>
 {% endblock %}

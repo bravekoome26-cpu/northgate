@@ -20,7 +20,7 @@
     <h1 class="hero-title">Gateway to the<br><em>Great North</em></h1>
     <p class="hero-subtitle">Where the wild savanna meets refined hospitality — a sanctuary at the edge of Kenya's Northern Frontier</p>
     <div class="hero-cta-row">
-      <a href="{% url 'room_list' %}" class="btn-ghost" style="background: var(--cream); color: var(--gold);">Explore Rooms</a>
+      <a href="{% url 'room_list' %}" class="btn-ghost">Explore Rooms</a>
       <a href="{% url 'about' %}" class="btn-outline">Discover the Resort</a>
     </div>
   </div>
@@ -48,7 +48,7 @@
       <div class="about-card">
         <div class="about-card-title">Isiolo's<br>Hidden Gem</div>
         <div class="about-card-sub">Northern Kenya · 10-Acre Estate</div>
-        <p style="font-size:0.83rem;line-height:1.8;color:rgba(245,237,216,0.7);">
+        <p class="hero-subtitle-small">
           Nestled on a tranquil 10-acre estate directly opposite Isiolo International Airport, Northgate Resort is a family-owned sanctuary founded by passionate travellers who believe great hospitality is an art form.
         </p>
         <div class="about-stats">
@@ -78,20 +78,20 @@
     <div class="about-text">
       <div class="section-label">About Northgate Resort</div>
       <h2 class="section-title">Where <em>Luxury</em><br>Meets the Wild</h2>
-      <p class="section-body" style="margin: 1.5rem 0 1.2rem;">
+      <p class="section-body section-body-spaced">
         Service, design and simplicity are at our core. From the moment you walk through our gates, you'll feel the special Northgate Resort hospitality — blissful gardens, a relaxing Olympic-size pool, and exceptional design set the scene for an extraordinary stay.
       </p>
       <p class="section-body">
         Surrounded by breathtaking parks, reserves and cultural sites, we are your perfect base for exploring the Great North — Samburu National Reserve, Buffalo Springs, and the magical Ngare Ndare Forest are all within easy reach.
       </p>
-      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-        <div style="background:var(--cream);padding:1rem 1.5rem;border-left:3px solid var(--gold);">
-          <div style="font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--earth);margin-bottom:0.2rem;">Solar Powered</div>
-          <div style="font-size:0.8rem;color:var(--forest-deep);">Committed to sustainability & eco-friendly operations</div>
+      <div class="badges-row">
+        <div class="badge-box badge-box-gold">
+          <div class="badge-label">Solar Powered</div>
+          <div class="badge-text">Committed to sustainability & eco-friendly operations</div>
         </div>
-        <div style="background:var(--cream);padding:1rem 1.5rem;border-left:3px solid var(--terracotta);">
-          <div style="font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--earth);margin-bottom:0.2rem;">Family Owned</div>
-          <div style="font-size:0.8rem;color:var(--forest-deep);">Passionate founders with a love for travel & hospitality</div>
+        <div class="badge-box badge-box-terracotta">
+          <div class="badge-label">Family Owned</div>
+          <div class="badge-text">Passionate founders with a love for travel & hospitality</div>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@
       <div class="section-label">Accommodation</div>
       <h2 class="section-title">Rest in <em>Comfort</em><br>& Style</h2>
     </div>
-    <p style="max-width:380px;font-size:0.83rem;line-height:1.8;color:#6b5d52;">
+    <p class="hero-content-text">
       Choose from our Luxury Tented Campsite with sky-lit bathrooms or our elegant Cottage Rooms — both offering the perfect blend of nature and comfort.
     </p>
   </div>
@@ -179,7 +179,7 @@
       </div>
     </div>
   </div>
-  <div style="max-width:1200px;margin:1.5rem auto 0;font-size:0.72rem;color:#9a8a80;letter-spacing:0.05em;">
+  <div class="rooms-price-note">
     * B&B = Bed &amp; Breakfast · Half-Board = Breakfast + Dinner · Full-Board = All Meals Included. Children may be accommodated in existing beds; additional fees may apply.
   </div>
 </section>
@@ -189,20 +189,20 @@
   <div class="dining-inner">
     <div class="dining-info">
       <div class="section-label">Restaurant & Bar</div>
-      <h2 class="section-title" style="color:var(--cream);">Eat, Drink &<br><em>Savour</em></h2>
-      <p class="section-body" style="margin-top:1.5rem;">
+      <h2 class="section-title">Eat, Drink &<br><em>Savour</em></h2>
+      <p class="section-body section-body-spaced">
         Come indulge your senses at Northgate Resort. Our talented kitchen and bar team work hard year-round to create inspired menus drawing from the rich culinary traditions of Kenya and beyond.
       </p>
       <div class="dining-highlight">
         "They serve breakfast for kings... The food is excellent! I loved the wet fried goat meat."<br>— Verified Guest Review
       </div>
-      <div style="margin-top: 2rem;">
-        <div style="font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Dining Options</div>
-        <div style="display:grid;gap:0.6rem;">
-          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🌅 Garden Alfresco Breakfast</div>
-          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🍖 Outdoor Private Grilling (Campsite)</div>
-          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🌿 Outdoor Patio Dining</div>
-          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🥃 Texas Tavern Lounge Bar</div>
+      <div class="dining-options-section">
+        <div class="section-label-inline">Dining Options</div>
+        <div class="dining-grid">
+          <div class="dining-item">🌅 Garden Alfresco Breakfast</div>
+          <div class="dining-item">🍖 Outdoor Private Grilling (Campsite)</div>
+          <div class="dining-item">🌿 Outdoor Patio Dining</div>
+          <div class="dining-item">🥃 Texas Tavern Lounge Bar</div>
         </div>
       </div>
     </div>
@@ -250,7 +250,7 @@
           </div>
           <span class="menu-item-price">Ksh 600</span>
         </div>
-        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(200,151,58,0.15);font-size:0.7rem;color:rgba(245,237,216,0.4);font-style:italic;">
+        <div class="dining-note">
           Breakfast included for B&B, Half-Board & Full-Board guests
         </div>
       </div>
@@ -329,7 +329,7 @@
           </div>
           <span class="menu-item-price">From Ksh 1,800</span>
         </div>
-        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(200,151,58,0.15);font-size:0.7rem;color:rgba(245,237,216,0.4);font-style:italic;">
+        <div class="dining-note">
           ✦ Self-outdoor grilling is exclusively available for campsite guests
         </div>
       </div>
@@ -370,7 +370,7 @@
           </div>
           <span class="menu-item-price">Ksh 180</span>
         </div>
-        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(200,151,58,0.15);font-size:0.7rem;color:rgba(245,237,216,0.4);font-style:italic;">
+        <div class="dining-note">
           * Menu items & prices are indicative. Please confirm with staff.
         </div>
       </div>
@@ -435,7 +435,7 @@
     <div>
       <div class="section-label">Events & Conferences</div>
       <h2 class="section-title">Your Perfect<br><em>Venue</em></h2>
-      <p class="section-body" style="margin-top:1.2rem;">
+      <p class="section-body" class="section-body section-body-spaced">
         Northgate Resort is proud to offer a selection of spaces and services suitable for every kind of event or celebration — from intimate gatherings to large corporate conferences.
       </p>
       <ul class="events-list">
@@ -448,7 +448,7 @@
         <li>Multi-lingual staff (English & Swahili) to assist delegates</li>
         <li>Accommodation packages for conference delegates</li>
       </ul>
-      <a href="{% url 'events' %}" class="btn-primary" style="display:inline-block;margin-top:1.5rem;background: var(--gold); color: var(--charcoal);">Enquire About Events</a>
+      <a href="{% url 'events' %}" class="btn-primary btn-inline">Enquire About Events</a>
     </div>
     <div class="events-visual">
       <span class="events-emoji">🏛️</span>
@@ -456,9 +456,9 @@
       <p class="events-note">
         Contact our logistics specialists to hear more about our conference rooms, event halls, catering services, gardens and additional bespoke solutions for your occasion.
       </p>
-      <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(200,151,58,0.2);">
-        <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.8rem;">Direct Contact</div>
-        <div style="font-size:0.82rem;color:rgba(245,237,216,0.75);line-height:1.8;">
+      <div class="contact-divider">
+        <div class="section-label-inline section-label-small">Direct Contact</div>
+        <div class="contact-info-text">
           📞 0799-268-366<br>
           📞 0786-089-065<br>
           ✉️ info.northgateresortisiolo@gmail.com
@@ -471,8 +471,8 @@
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="testimonials-inner">
-    <div class="section-label" style="justify-content:center;">Guest Reviews</div>
-    <h2 class="section-title" style="color:var(--cream);">What Our <em>Guests</em> Say</h2>
+    <div class="section-label section-label-center">Guest Reviews</div>
+    <h2 class="section-title">What Our <em>Guests</em> Say</h2>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
@@ -513,20 +513,20 @@
   <h2>Ready to Experience Northgate?</h2>
   <p>Book your stay directly and enjoy our best available rates</p>
   <div class="book-form">
-    <input type="text" placeholder="Your Name">
-    <input type="date">
-    <select>
+    <input type="text" placeholder="Your Name" title="Enter your full name">
+    <input type="date" placeholder="Check-in Date" title="Select check-in date">
+    <select title="Select room type">
       <option value="">Room Type</option>
       <option>Luxury Tented Campsite</option>
       <option>Luxury Cottage Room</option>
     </select>
-    <select>
+    <select title="Select board type">
       <option value="">Board Type</option>
       <option>B&B</option>
       <option>Half-Board</option>
       <option>Full-Board</option>
     </select>
-    <button onclick="bookNow()">Enquire Now</button>
+    <button onclick="bookNow()" title="Submit booking enquiry">Enquire Now</button>
   </div>
 </div>
 
@@ -536,7 +536,7 @@
     <div>
       <div class="section-label">Find Us</div>
       <h2 class="section-title">Location &<br><em>Getting Here</em></h2>
-      <p class="section-body" style="margin-top:1.2rem;">Conveniently located on Airport Road, Isiolo — directly opposite the proposed International Airport and just 2km from Isiolo town centre. Accessible by tarmac road all the way to our gate.</p>
+      <p class="section-body section-body-spaced">Conveniently located on Airport Road, Isiolo — directly opposite the proposed International Airport and just 2km from Isiolo town centre. Accessible by tarmac road all the way to our gate.</p>
       <ul class="nearby-list">
         <li><span>Isiolo Town Centre</span><span>2 km</span></li>
         <li><span>Isiolo International Airport</span><span>Adjacent</span></li>

@@ -1025,6 +1025,129 @@ textarea:focus {
 .site-footer a:hover {
     color: #fbbf24;
 }
+
+/* Extracted inline style classes */
+.hero-subtitle-small {
+    font-size: 0.83rem;
+    line-height: 1.8;
+    color: rgba(245, 237, 216, 0.7);
+}
+
+.section-body-spaced {
+    margin: 1.5rem 0 1.2rem;
+}
+
+.badges-row {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge-box {
+    padding: 1rem 1.5rem;
+}
+
+.badge-box-gold {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+}
+
+.badge-box-terracotta {
+    background: var(--cream);
+    border-left: 3px solid var(--terracotta);
+}
+
+.badge-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin-bottom: 0.2rem;
+}
+
+.badge-text {
+    font-size: 0.8rem;
+    color: var(--forest-deep);
+}
+
+.hero-content-text {
+    max-width: 380px;
+    font-size: 0.83rem;
+    line-height: 1.8;
+    color: #6b5d52;
+}
+
+.rooms-price-note {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    font-size: 0.72rem;
+    color: #9a8a80;
+    letter-spacing: 0.05em;
+}
+
+.dining-options-section {
+    margin-top: 2rem;
+}
+
+.section-label-inline {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+}
+
+.section-label-small {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.8rem;
+}
+
+.dining-grid {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.dining-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.8rem;
+    color: rgba(245, 237, 216, 0.75);
+}
+
+.dining-note {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(200, 151, 58, 0.15);
+    font-size: 0.7rem;
+    color: rgba(245, 237, 216, 0.4);
+    font-style: italic;
+}
+
+.section-label-center {
+    justify-content: center;
+}
+
+.btn-inline {
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+.contact-divider {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(200, 151, 58, 0.2);
+}
+
+.contact-info-text {
+    font-size: 0.82rem;
+    color: rgba(245, 237, 216, 0.75);
+    line-height: 1.8;
+}
 .site-footer .footer-links li {
     margin-bottom: 0.75rem;
 }
@@ -1156,3 +1279,526 @@ textarea:focus {
 .gen-s-072 { padding:2.5rem; }
 .gen-s-086 { text-align:center; }
 .gen-s-069 { width:100%; }
+
+/* About page styles */
+.about-section-full-width {
+    padding: 5rem 0;
+}
+
+.about-section-light {
+    padding: 4rem 0;
+    background: rgba(232, 185, 106, 0.08);
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+.about-text {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: rgba(26, 46, 38, 0.85);
+}
+
+.about-text-spaced {
+    margin-top: 1rem;
+}
+
+.about-box {
+    background: rgba(245, 237, 216, 0.9);
+    padding: 2.5rem;
+    border-radius: 24px;
+}
+
+.about-box-title {
+    color: var(--forest-deep);
+}
+
+.about-box-body {
+    margin-top: 1.5rem;
+}
+
+.about-features-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.about-feature-item {
+    background: #fff9ee;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid var(--gold);
+}
+
+.about-features-grid-multi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: var(--cream);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.feature-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.feature-card-text {
+    line-height: 1.8;
+    color: #5a4d42;
+}
+
+.about-feature-location {
+    background: #fff9ee;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid var(--earth);
+}
+
+.location-detail {
+    margin: 0.4rem 0 0;
+    color: #5a4d42;
+}
+
+.closing-section {
+    padding: 4rem 0;
+    background: var(--forest-deep);
+    color: var(--cream);
+}
+
+.closing-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.closing-title {
+    color: var(--cream);
+}
+
+.closing-text {
+    margin-top: 1.5rem;
+    color: rgba(245, 237, 216, 0.9);
+}
+
+/* Experiences page */
+.exp-header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.exp-header-text {
+    margin-top: 1.5rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exp-activities-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.exp-lower-section {
+    padding: 4rem 0;
+    background: rgba(232, 185, 106, 0.08);
+}
+
+.exp-lower-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.exp-text-col {
+    margin-top: 1.5rem;
+}
+
+.exp-benefits-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.benefit-box {
+    background: var(--cream);
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+}
+
+.benefit-box-text {
+    margin: 0.8rem 0 0;
+    color: #5a4d42;
+}
+
+.exp-cta-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* Events page */
+.events-header {
+    padding: 5rem 0;
+}
+
+.events-header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.events-header-text {
+    margin-top: 1.5rem;
+    max-width: 760px;
+}
+
+.events-packages-section {
+    padding: 4rem 0;
+    background: rgba(245, 237, 216, 0.94);
+}
+
+.events-visual {
+    padding: 3rem;
+}
+
+.events-services-note {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(200, 151, 58, 0.15);
+    color: rgba(245, 237, 216, 0.85);
+}
+
+.services-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.8rem;
+}
+
+.services-text {
+    line-height: 1.8;
+}
+
+.events-grid-section {
+    padding: 4rem 0;
+}
+
+.events-grid-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Event cards */
+.event-package-box {
+    background: var(--cream);
+    padding: 2.2rem;
+    border-radius: 1.5rem;
+}
+
+.event-package-title {
+    margin-bottom: 1rem;
+}
+
+.event-package-text {
+    line-height: 1.8;
+    color: #5a4d42;
+}
+
+.event-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 1.8rem;
+    border-radius: 1.5rem;
+}
+
+.event-card-title {
+    margin-bottom: 0.8rem;
+}
+
+.cta-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* Contact page */
+.contact-header {
+    padding: 5rem 0;
+}
+
+.contact-header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-header-text {
+    margin-top: 1.5rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location-section {
+    padding: 4rem 0;
+    gap: 3rem;
+}
+
+.location-address {
+    margin-top: 1.2rem;
+}
+
+.nearby-list-container {
+    margin-top: 2rem;
+}
+
+.contact-cards-container {
+    margin-top: 2rem;
+}
+
+/* Room list page */
+.rooms-section {
+    padding: 5rem 0;
+}
+
+.rooms-header {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.rooms-header-text {
+    margin-top: 1.4rem;
+    max-width: 680px;
+}
+
+.room-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.room-card-title {
+    margin: 0;
+}
+
+.room-card-meta {
+    margin: 0;
+    color: #8b5e3c;
+    font-weight: 600;
+}
+
+.room-card-desc {
+    margin-top: 1rem;
+}
+
+.room-card-btn {
+    margin-top: auto;
+}
+
+.room-card-full {
+    grid-column: 1 / -1;
+}
+
+/* Food menu page */
+.menu-section {
+    padding: 5rem 0;
+}
+
+.menu-intro-text {
+    margin-top: 1.4rem;
+    max-width: 680px;
+}
+
+.menu-info-grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.menu-info-box {
+    background: var(--cream);
+    padding: 1.2rem 1.4rem;
+    border-radius: 20px;
+    border-left: 4px solid var(--gold);
+}
+
+.menu-info-box-alt {
+    border-left-color: var(--forest);
+}
+
+.menu-info-text {
+    margin: 0.5rem 0 0;
+    color: #5a4d42;
+}
+
+.menu-cta-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Login page */
+.login-section {
+    padding: 5rem 0;
+}
+
+.login-container {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 1.5rem;
+}
+
+.login-title {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+/* Form pages */
+.form-body-intro {
+    margin-top: 1rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-field-final {
+    margin-bottom: 1.5rem;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.form-redirect {
+    margin-top: 1.4rem;
+    text-align: center;
+    color: #5a4d42;
+}
+
+.form-card {
+    padding: 2.5rem;
+}
+
+.form-card-wide {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* Bookings page */
+.bookings-section {
+    padding: 5rem 0;
+}
+
+.bookings-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bookings-header {
+    margin-bottom: 2rem;
+}
+
+.bookings-intro {
+    margin-top: 1rem;
+}
+
+.bookings-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.booking-card {
+    border-left: 4px solid var(--gold);
+}
+
+.booking-title {
+    margin-top: 0;
+}
+
+.booking-detail {
+    margin: 0.5rem 0;
+}
+
+.booking-detail-note {
+    color: #5a4d42;
+}
+
+.booking-empty {
+    text-align: center;
+}
+
+/* Packages page */
+.packages-section {
+    padding: 5rem 0;
+}
+
+.packages-intro-text {
+    margin-top: 1.4rem;
+    max-width: 720px;
+}
+
+.packages-grid-section {
+    padding: 4rem 0;
+    background: rgba(232, 185, 106, 0.08);
+}
+
+.packages-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.package-description {
+    line-height: 1.8;
+    color: #5a4d42;
+}
+
+.package-features {
+    margin-top: 1rem;
+    padding-left: 1.1rem;
+    color: #5a4d42;
+}
+
+.services-section {
+    padding: 4rem 0;
+}
+
+.services-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: var(--forest);
+    color: var(--cream);
+}
+
+.service-text {
+    line-height: 1.8;
+}
