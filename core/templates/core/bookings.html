@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% block title %}My Bookings · Northgate Resort Isiolo{% endblock %}
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="page-header" style="margin-bottom:2rem;">
+      <h1 class="section-title">My Bookings</h1>
+      <p class="section-body" style="margin-top:1rem;">Review your reservations, stay dates, and upcoming resort details in one place.</p>
+    </div>
+    <div style="display:grid; gap:1.5rem;">
+      {% for booking in bookings %}
+      <div class="content-panel" style="border-left:4px solid var(--gold);">
+        <h3 style="margin-top:0;">{{ booking.room.name }}</h3>
+        <p style="margin:0.5rem 0;"><strong>Stay:</strong> {{ booking.check_in }} to {{ booking.check_out }}</p>
+        <p style="margin:0.5rem 0;"><strong>Total:</strong> Ksh {{ booking.total_price }}</p>
+        <p style="margin:0.5rem 0;color:#5a4d42;">Thank you for booking with Northgate Resort Isiolo.</p>
+      </div>
+      {% empty %}
+      <div class="content-panel" style="text-align:center;">
+        <h3>No bookings yet</h3>
+        <p class="section-body">Explore rooms and reserve your stay to see bookings here.</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

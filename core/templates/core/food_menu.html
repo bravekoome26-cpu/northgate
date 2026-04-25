@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Food Menu · North Gate Resort{% endblock %}
+
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div class="dining-inner">
+    <div class="dining-info">
+      <div class="section-label">Dining</div>
+      <h2 class="section-title">Savour the best of local flavour and relaxed dining.</h2>
+      <p class="section-body" style="margin-top:1.4rem; max-width:680px;">
+        Our restaurant and bar bring bright Kenyan classics, international comfort food, and refreshing drinks together in a welcoming setting. Perfect for guests returning from safari, business travellers and families.
+      </p>
+      <div style="margin-top:2rem; display:grid; gap:1rem;">
+        <div style="background: var(--cream); padding:1.2rem 1.4rem; border-radius: 20px; border-left: 4px solid var(--gold);">
+          <strong>Breakfast, lunch & dinner</strong>
+          <p style="margin:0.5rem 0 0; color:#5a4d42;">Daily menus feature fresh ingredients, roasted meats, salads and homemade desserts.</p>
+        </div>
+        <div style="background: var(--cream); padding:1.2rem 1.4rem; border-radius: 20px; border-left: 4px solid var(--forest);">
+          <strong>Bar & lounge</strong>
+          <p style="margin:0.5rem 0 0; color:#5a4d42;">Enjoy cocktails, craft beer and chilled juices in our relaxed tavern.</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu-panel">
+      <div class="menu-tabs">
+        <button class="menu-tab active" onclick="showTab('menu')">Menu Items</button>
+        <button class="menu-tab" onclick="showTab('specials')">Chef's Specials</button>
+      </div>
+      <div class="menu-content active" id="tab-menu">
+        {% if food_items %}
+          {% for item in food_items %}
+          <div class="menu-item">
+            <div>
+              <div class="menu-item-name">{{ item.name }}</div>
+              <span class="menu-item-desc">Freshly prepared, daily kitchen selection</span>
+            </div>
+            <span class="menu-item-price">Ksh {{ item.price }}</span>
+          </div>
+          {% endfor %}
+        {% else %}
+          <p class="section-body">Our kitchen is fine-tuning the menu. Please contact reception for daily specials.</p>
+        {% endif %}
+      </div>
+      <div class="menu-content" id="tab-specials">
+        <div class="menu-section-title">Daily Specials</div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Spiced Goat Nyama Choma</div>
+            <span class="menu-item-desc">Marinated and roasted with local herbs, served with ugali and kachumbari.</span>
+          </div>
+          <span class="menu-item-price">Ksh 1,250</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Savanna Chicken Pot</div>
+            <span class="menu-item-desc">Slow-cooked stew with fresh vegetables and Kenyan spices.</span>
+          </div>
+          <span class="menu-item-price">Ksh 1,050</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Tropical Fruit Platter</div>
+            <span class="menu-item-desc">Seasonal fruit selection from the region, perfect for sharing.</span>
+          </div>
+          <span class="menu-item-price">Ksh 650</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="padding: 2rem 0; text-align:center;">
+  <a href="{% url 'order_food' %}" class="btn-primary">Order Food</a>
+</section>
+{% endblock %}

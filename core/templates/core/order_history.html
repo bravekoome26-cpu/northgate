@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Order History · North Gate Resort{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="h2"><i class="fa-solid fa-history me-2"></i>Order History</h1>
+    <p>Review your past food orders and the resort dining experiences you’ve enjoyed.</p>
+</div>
+<div class="row gy-4">
+    {% for order in orders %}
+    <div class="col-md-6">
+        <div class="card content-panel h-100">
+            <div class="card-body">
+                <h5 class="card-title">Order #{{ order.pk }}</h5>
+                <p class="card-text mb-2"><strong>Items:</strong> {% for item in order.items.all %}{{ item.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+                <p class="card-text mb-1"><strong>Total:</strong> ${{ order.total_price }}</p>
+                <p class="card-text text-muted">{{ order.created_at }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

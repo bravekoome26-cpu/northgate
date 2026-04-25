@@ -1,0 +1,84 @@
+{% extends 'core/base.html' %}
+{% block title %}Experiences at Northgate Resort — Adventure & Relaxation{% endblock %}
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+    <div class="section-label">Experiences</div>
+    <h1 class="section-title">Connect with nature, culture and comfort.</h1>
+    <p class="section-body" style="margin-top: 1.5rem; max-width: 760px; margin-left:auto; margin-right:auto;">
+      From tranquil mornings beside the pool to unforgettable safari journeys, Northgate Resort offers a range of experiences designed to bring the best of Northern Kenya within easy reach.
+    </p>
+  </div>
+</section>
+
+<section class="exp-inner" style="padding: 4rem 0;">
+  <div style="display:grid; gap: 2rem;">
+    <div class="exp-card">
+      <span class="exp-icon">🦁</span>
+      <h3 class="exp-card-title">Guided Game Drives</h3>
+      <p class="exp-card-desc">Travel into Samburu and Buffalo Springs with an experienced local guide. See giraffe, zebra, elephant and the Samburu Special Five while learning about the ecosystem and wildlife.</p>
+      <div class="exp-price">From Ksh 3,500 per person</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon">🌿</span>
+      <h3 class="exp-card-title">Guided Nature Walks</h3>
+      <p class="exp-card-desc">Enjoy a gentle walk along River Kisima and through nearby woodlands. Discover native plants, birds and quiet water features with a knowledgeable guide.</p>
+      <div class="exp-price">Ksh 500 per person</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon">🏊</span>
+      <h3 class="exp-card-title">Olympic Pool Retreat</h3>
+      <p class="exp-card-desc">Refresh in our large, landscaped pool area. Enjoy lounge seating, shaded cabanas and poolside service in a calm garden setting.</p>
+      <div class="exp-price">Included for Guests · Day Pass Available</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon">📸</span>
+      <h3 class="exp-card-title">Photoshoot Settings</h3>
+      <p class="exp-card-desc">Capture memorable images across our gardens, tented campsite and elegant cottages. Ideal for weddings, branding shoots and family portraits.</p>
+      <div class="exp-price">Custom packages available</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon">👨‍👩‍👧</span>
+      <h3 class="exp-card-title">Family Fun</h3>
+      <p class="exp-card-desc">Enjoy a family-friendly environment with play areas, pool access, family dining and outdoor games designed to keep guests of all ages comfortable.</p>
+      <div class="exp-price">Day entry and packages</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon">🤝</span>
+      <h3 class="exp-card-title">Team Building & Retreats</h3>
+      <p class="exp-card-desc">Host corporate groups in our greenery and meeting spaces. Tailored programmes, catering and logistics support are available on request.</p>
+      <div class="exp-price">Custom packages available</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 4rem 0; background: rgba(232,185,106,0.08);">
+  <div style="max-width:1100px;margin:0 auto; display:grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+    <div>
+      <div class="section-label">Custom Journeys</div>
+      <h2 class="section-title">Create your own Northern Kenya adventure.</h2>
+      <p class="section-body" style="margin-top:1.5rem;">
+        We can arrange everything from private safari routes and cultural visits to personalised spa escapes and photography days. Tell us what you want to experience and we will help plan it.
+      </p>
+    </div>
+    <div style="display:grid; gap: 1rem;">
+      <div style="background: var(--cream); padding: 1.5rem; border-radius: 1.2rem;">
+        <strong>Reserve a private safari</strong>
+        <p style="margin:0.8rem 0 0; color:#5a4d42;">Small-group departure to the region's best wildlife parks with a trusted local guide.</p>
+      </div>
+      <div style="background: var(--cream); padding: 1.5rem; border-radius: 1.2rem;">
+        <strong>Culture & community trips</strong>
+        <p style="margin:0.8rem 0 0; color:#5a4d42;">Visit local towns, markets and conservancies to connect with northern Kenya's rich culture.</p>
+      </div>
+      <div style="background: var(--cream); padding: 1.5rem; border-radius: 1.2rem;">
+        <strong>Wellness time</strong>
+        <p style="margin:0.8rem 0 0; color:#5a4d42;">Relax in our gardens and pool, or enjoy gentle guided walks to reset after travel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 3rem 0; text-align:center;">
+  <a href="{% url 'contact' %}" class="btn-primary">Contact us to book an experience</a>
+</section>
+{% endblock %}

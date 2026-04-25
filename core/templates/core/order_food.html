@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Order Food · North Gate Resort{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="h2"><i class="fa-solid fa-cart-plus me-2"></i>Order Food</h1>
+    <p>Place your food order and enjoy a fresh meal delivered to your room or table at the resort.</p>
+</div>
+<div class="content-panel form-card" style="padding:2.5rem;">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-primary" style="margin-top:1.5rem;">Place Order</button>
+    </form>
+</div>
+{% endblock %}

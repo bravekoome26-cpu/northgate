@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% block title %}Packages · Northgate Resort Isiolo{% endblock %}
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="section-label">Packages</div>
+    <h1 class="section-title">Special stays, group offers and curated activity packages.</h1>
+    <p class="section-body" style="margin-top:1.4rem; max-width: 720px;">Choose from our thoughtfully designed packages for families, couples, business travellers and event groups. Each package combines luxurious accommodation, dining options and extra experiences tailored to the Northgate Resort signature stay.</p>
+  </div>
+</section>
+
+<section style="padding: 4rem 0; background: rgba(232,185,106,0.08);">
+  <div style="max-width: 1100px; margin: 0 auto; display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+    <div class="content-panel">
+      <h3>Family Escape</h3>
+      <p style="line-height:1.8; color:#5a4d42;">Perfect for families with children. Includes cottage room accommodation, breakfast for four, access to the pool, kids play area and a guided nature walk.</p>
+      <ul style="margin-top:1rem; padding-left:1.1rem; color:#5a4d42;">
+        <li>Family room or adjoining cottages</li>
+        <li>Kids meal package</li>
+        <li>Poolside games</li>
+      </ul>
+    </div>
+    <div class="content-panel">
+      <h3>Business Retreat</h3>
+      <p style="line-height:1.8; color:#5a4d42;">Ideal for corporate groups and meetings. Includes conference room access, high-speed Wi-Fi, breakfast and lunch catering, plus guest room blocks.</p>
+      <ul style="margin-top:1rem; padding-left:1.1rem; color:#5a4d42;">
+        <li>Meeting room with AV support</li>
+        <li>Breakfast and lunch service</li>
+        <li>Airport transfer coordination</li>
+      </ul>
+    </div>
+    <div class="content-panel">
+      <h3>Romantic Getaway</h3>
+      <p style="line-height:1.8; color:#5a4d42;">A quiet escape for couples. Includes deluxe candlelit dining, private garden seating and a late check-out option.</p>
+      <ul style="margin-top:1rem; padding-left:1.1rem; color:#5a4d42;">
+        <li>Luxury cottage room</li>
+        <li>Private dinner</li>
+        <li>Spa and pool access</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 4rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto; display:grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap:1.5rem;">
+    <div class="content-panel" style="background: var(--forest); color: var(--cream);">
+      <h3>Airport Transfer Package</h3>
+      <p style="line-height:1.8;">Stay worry-free with easy airport transfer coordination for guests arriving at Isiolo International Airport.</p>
+    </div>
+    <div class="content-panel" style="background: var(--forest); color: var(--cream);">
+      <h3>Event Support Package</h3>
+      <p style="line-height:1.8;">Perfect for weddings, launches and celebrations. Includes venue setup, catering and event coordination support.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 3rem 0; text-align:center;">
+  <a href="{% url 'contact' %}" class="btn-primary">Enquire about our packages</a>
+</section>
+{% endblock %}

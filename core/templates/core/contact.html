@@ -1,0 +1,65 @@
+{% extends 'core/base.html' %}
+{% block title %}Contact Northgate Resort Isiolo{% endblock %}
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+    <div class="section-label">Contact</div>
+    <h1 class="section-title">Let's make your stay easy.</h1>
+    <p class="section-body" style="margin-top:1.5rem; max-width:760px; margin-left:auto; margin-right:auto;">
+      Reach out to our reservations team for room bookings, event enquiries, or planning support for experiences and transport from Isiolo International Airport.
+    </p>
+  </div>
+</section>
+
+<section class="location-inner" style="padding: 4rem 0; gap: 3rem;">
+  <div>
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">Northgate Resort Isiolo</h2>
+    <p class="section-body" style="margin-top:1.2rem;">Airport Road, Isiolo · Opposite Isiolo International Airport<br>2 km from Isiolo town centre · Accessible via tarmac road.</p>
+    <ul class="nearby-list" style="margin-top:2rem;">
+      <li><span>Isiolo International Airport</span><span>Adjacent</span></li>
+      <li><span>Samburu National Reserve</span><span>30 km</span></li>
+      <li><span>Ngare Ndare Forest</span><span>28 km</span></li>
+      <li><span>Nairobi via A2</span><span>280 km</span></li>
+    </ul>
+  </div>
+  <div>
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Talk to our team</h2>
+    <div class="contact-cards" style="margin-top:2rem;">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Reservations</div>
+          <div class="contact-value"><a href="tel:+254799268366">0799-268-366</a></div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:info.northgateresortisiolo@gmail.com">info.northgateresortisiolo@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🕒</div>
+        <div>
+          <div class="contact-label">Reception</div>
+          <div class="contact-value">24/7 guest service</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Postal Address</div>
+          <div class="contact-value">P.O. Box 60300, Isiolo, Kenya</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 3rem 0; text-align:center;">
+  <a href="{% url 'table_reservation' %}" class="btn-primary">Reserve a table or event today</a>
+</section>
+{% endblock %}

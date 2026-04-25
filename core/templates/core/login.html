@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% block title %}Login · Northgate Resort Isiolo{% endblock %}
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div style="max-width: 520px; margin: 0 auto;">
+    <div class="content-panel form-card">
+      <div class="page-header" style="margin-bottom:1.5rem;">
+        <h1 class="section-title" style="font-size: clamp(2rem, 4vw, 2.6rem);">Guest Login</h1>
+        <p class="section-body" style="margin-top:1rem;">Access your bookings, dining orders, and reservation details.</p>
+      </div>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div style="margin-bottom:1rem;">{{ form.username.label_tag }}<br>{{ form.username }}</div>
+        <div style="margin-bottom:1.5rem;">{{ form.password.label_tag }}<br>{{ form.password }}</div>
+        <button class="btn-primary" type="submit" style="width:100%;">Login</button>
+      </form>
+      <p style="margin-top:1.4rem; text-align:center; color:#5a4d42;">New to Northgate Resort? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

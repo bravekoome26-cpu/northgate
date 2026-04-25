@@ -1,0 +1,41 @@
+[
+  {
+    "model": "core.room",
+    "pk": 1,
+    "fields": {
+      "name": "Standard Garden Room",
+      "slug": "standard-garden-room",
+      "room_type": "standard",
+      "description": "A cozy garden-facing room with modern amenities, perfect for a relaxing stay.",
+      "price_per_night": "4500.00",
+      "capacity": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.room",
+    "pk": 2,
+    "fields": {
+      "name": "Classic Deluxe Suite",
+      "slug": "classic-deluxe-suite",
+      "room_type": "classic",
+      "description": "Spacious suite with elegant decor, premium bedding, and a view of the resort grounds.",
+      "price_per_night": "7500.00",
+      "capacity": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.room",
+    "pk": 3,
+    "fields": {
+      "name": "Premium Poolside Villa",
+      "slug": "premium-poolside-villa",
+      "room_type": "premium",
+      "description": "Luxury villa steps away from the pool, with private seating, extras, and refined style.",
+      "price_per_night": "12500.00",
+      "capacity": 4,
+      "is_active": true
+    }
+  }
+]

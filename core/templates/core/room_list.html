@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% block title %}Rooms · Northgate Resort Isiolo{% endblock %}
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div class="rooms-header" style="max-width: 1200px; margin: 0 auto 3rem;">
+    <div class="section-label">Accommodation</div>
+    <h2 class="section-title">Rooms, Tents & Cottage Stays</h2>
+    <p class="section-body" style="margin-top: 1.4rem; max-width: 680px;">
+      Discover our available rooms with comfortable bedding, private bathrooms and quiet garden views. Each stay is designed for guests who want rest, convenience and a touch of northern Kenya hospitality.
+    </p>
+  </div>
+  <div class="rooms-grid">
+    {% for room in rooms %}
+    <div class="room-card">
+      <div class="room-card-header"></div>
+      <div class="content-panel" style="display:flex;flex-direction:column;gap:1rem;">
+        <h3 style="margin:0;">{{ room.name }}</h3>
+        <p style="margin:0;color:#8b5e3c;font-weight:600;">{{ room.room_type|capfirst }} • Ksh {{ room.price }}</p>
+        <p class="section-body" style="margin-top:1rem;">{{ room.description|truncatechars:120 }}</p>
+        <a href="{% url 'room_detail' room.pk %}" class="btn-ghost" style="margin-top:auto;">View Details</a>
+      </div>
+    </div>
+    {% empty %}
+    <div class="room-card" style="grid-column:1/-1;">
+      <div class="content-panel">
+        <h3>No rooms available</h3>
+        <p class="section-body">Please contact us for the next availability window or reserve a room as soon as new dates open.</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

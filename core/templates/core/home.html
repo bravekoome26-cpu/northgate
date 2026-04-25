@@ -1,0 +1,603 @@
+{% extends 'core/base.html' %}
+{% block title %}Northgate Resort Isiolo — Gateway to the Great North{% endblock %}
+{% block content %}
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-acacia"></div>
+  <svg class="acacia-svg" viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="150" y1="280" x2="150" y2="160" stroke="#C8973A" stroke-width="4"/>
+    <line x1="150" y1="200" x2="80" y2="160" stroke="#C8973A" stroke-width="3"/>
+    <line x1="150" y1="185" x2="220" y2="145" stroke="#C8973A" stroke-width="3"/>
+    <ellipse cx="150" cy="135" rx="120" ry="45" fill="#C8973A" opacity="0.9"/>
+    <ellipse cx="75" cy="145" rx="60" ry="28" fill="#C8973A" opacity="0.8"/>
+    <ellipse cx="225" cy="130" rx="65" ry="28" fill="#C8973A" opacity="0.8"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Airport Road, Isiolo · Est. 2020</div>
+    <h1 class="hero-title">Gateway to the<br><em>Great North</em></h1>
+    <p class="hero-subtitle">Where the wild savanna meets refined hospitality — a sanctuary at the edge of Kenya's Northern Frontier</p>
+    <div class="hero-cta-row">
+      <a href="{% url 'room_list' %}" class="btn-ghost" style="background: var(--cream); color: var(--gold);">Explore Rooms</a>
+      <a href="{% url 'about' %}" class="btn-outline">Discover the Resort</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- AMENITIES STRIP -->
+<div class="amenities-strip">
+  <div class="amenities-inner">
+    <div class="amenity-item"><span class="amenity-icon">🏊</span> Olympic Swimming Pool</div>
+    <div class="amenity-item"><span class="amenity-icon">🍽️</span> Restaurant & Bar</div>
+    <div class="amenity-item"><span class="amenity-icon">⛺</span> Luxury Glamping</div>
+    <div class="amenity-item"><span class="amenity-icon">🏛️</span> Conference Centre</div>
+    <div class="amenity-item"><span class="amenity-icon">📸</span> Photoshoot Grounds</div>
+    <div class="amenity-item"><span class="amenity-icon">🌿</span> Lush Gardens</div>
+    <div class="amenity-item"><span class="amenity-icon">🚗</span> Airport Transfers</div>
+    <div class="amenity-item"><span class="amenity-icon">📶</span> Free Wi-Fi</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="about-card-title">Isiolo's<br>Hidden Gem</div>
+        <div class="about-card-sub">Northern Kenya · 10-Acre Estate</div>
+        <p style="font-size:0.83rem;line-height:1.8;color:rgba(245,237,216,0.7);">
+          Nestled on a tranquil 10-acre estate directly opposite Isiolo International Airport, Northgate Resort is a family-owned sanctuary founded by passionate travellers who believe great hospitality is an art form.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-num">10</div>
+            <div class="stat-label">Acres of Estate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4★</div>
+            <div class="stat-label">TripAdvisor Rating</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">#3</div>
+            <div class="stat-label">Best Lodging in Isiolo</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">2km</div>
+            <div class="stat-label">From Isiolo Town</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-badge">
+        <strong>★4</strong>
+        Rated on<br>TripAdvisor
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-label">About Northgate Resort</div>
+      <h2 class="section-title">Where <em>Luxury</em><br>Meets the Wild</h2>
+      <p class="section-body" style="margin: 1.5rem 0 1.2rem;">
+        Service, design and simplicity are at our core. From the moment you walk through our gates, you'll feel the special Northgate Resort hospitality — blissful gardens, a relaxing Olympic-size pool, and exceptional design set the scene for an extraordinary stay.
+      </p>
+      <p class="section-body">
+        Surrounded by breathtaking parks, reserves and cultural sites, we are your perfect base for exploring the Great North — Samburu National Reserve, Buffalo Springs, and the magical Ngare Ndare Forest are all within easy reach.
+      </p>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <div style="background:var(--cream);padding:1rem 1.5rem;border-left:3px solid var(--gold);">
+          <div style="font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--earth);margin-bottom:0.2rem;">Solar Powered</div>
+          <div style="font-size:0.8rem;color:var(--forest-deep);">Committed to sustainability & eco-friendly operations</div>
+        </div>
+        <div style="background:var(--cream);padding:1rem 1.5rem;border-left:3px solid var(--terracotta);">
+          <div style="font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--earth);margin-bottom:0.2rem;">Family Owned</div>
+          <div style="font-size:0.8rem;color:var(--forest-deep);">Passionate founders with a love for travel & hospitality</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <div class="rooms-header">
+    <div>
+      <div class="section-label">Accommodation</div>
+      <h2 class="section-title">Rest in <em>Comfort</em><br>& Style</h2>
+    </div>
+    <p style="max-width:380px;font-size:0.83rem;line-height:1.8;color:#6b5d52;">
+      Choose from our Luxury Tented Campsite with sky-lit bathrooms or our elegant Cottage Rooms — both offering the perfect blend of nature and comfort.
+    </p>
+  </div>
+  <div class="rooms-grid">
+    <!-- Tented Camp -->
+    <div class="room-card room-tent">
+      <div class="room-visual">
+        <div class="room-visual-bg">⛺</div>
+        <div class="room-tag">Most Popular</div>
+      </div>
+      <div class="room-body">
+        <h3 class="room-name">Luxury Tented Campsite</h3>
+        <p class="room-desc">Experience the magic of sleeping under canvas without sacrificing comfort. Our glamping tents feature skylight bathrooms, comfortable beds, and a serene setting in a quiet corner of the resort. Self-outdoor grilling available for residents.</p>
+        <div class="room-features">
+          <span class="feat-tag">Skylight Bathroom</span>
+          <span class="feat-tag">Outdoor Grilling</span>
+          <span class="feat-tag">Garden View</span>
+          <span class="feat-tag">Daily Housekeeping</span>
+          <span class="feat-tag">Free Wi-Fi</span>
+          <span class="feat-tag">Smart TV</span>
+        </div>
+        <div class="room-pricing">
+          <div class="price-col">
+            <div class="price-col-title">Single Occupancy</div>
+            <div class="price-row"><span>B&B</span><strong>Ksh 8,000</strong></div>
+            <div class="price-row"><span>Half-Board</span><strong>Ksh 9,500</strong></div>
+            <div class="price-row"><span>Full-Board</span><strong>Ksh 11,000</strong></div>
+          </div>
+          <div class="price-col">
+            <div class="price-col-title">Double Occupancy</div>
+            <div class="price-row"><span>B&B</span><strong>Ksh 12,000</strong></div>
+            <div class="price-row"><span>Half-Board</span><strong>Ksh 13,500</strong></div>
+            <div class="price-row"><span>Full-Board</span><strong>Ksh 15,000</strong></div>
+          </div>
+        </div>
+        <a href="mailto:info.northgateresortisiolo@gmail.com" class="btn-room">Book This Room</a>
+      </div>
+    </div>
+    <!-- Cottage -->
+    <div class="room-card room-cottage">
+      <div class="room-visual">
+        <div class="room-visual-bg">🏡</div>
+        <div class="room-tag">New Rooms</div>
+      </div>
+      <div class="room-body">
+        <h3 class="room-name">Luxury Cottage Rooms</h3>
+        <p class="room-desc">Our beautifully appointed cottage rooms offer spacious, clean, and elegant accommodation — reviewed as "heavenly" by guests. Perfect for travellers or groups seeking the full resort experience with easy pool access and stunning garden views.</p>
+        <div class="room-features">
+          <span class="feat-tag">Ensuite Bathroom</span>
+          <span class="feat-tag">Blackout Curtains</span>
+          <span class="feat-tag">Fireplace</span>
+          <span class="feat-tag">Pool Access</span>
+          <span class="feat-tag">Smart TV</span>
+          <span class="feat-tag">Free Breakfast</span>
+        </div>
+        <div class="room-pricing">
+          <div class="price-col">
+            <div class="price-col-title">Single Occupancy</div>
+            <div class="price-row"><span>B&B</span><strong>Ksh 10,000</strong></div>
+            <div class="price-row"><span>Half-Board</span><strong>Ksh 11,500</strong></div>
+            <div class="price-row"><span>Full-Board</span><strong>Ksh 13,000</strong></div>
+          </div>
+          <div class="price-col">
+            <div class="price-col-title">Double Occupancy</div>
+            <div class="price-row"><span>B&B</span><strong>Ksh 15,000</strong></div>
+            <div class="price-row"><span>Half-Board</span><strong>Ksh 16,500</strong></div>
+            <div class="price-row"><span>Full-Board</span><strong>Ksh 18,000</strong></div>
+          </div>
+        </div>
+        <a href="mailto:info.northgateresortisiolo@gmail.com" class="btn-room">Book This Room</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:1.5rem auto 0;font-size:0.72rem;color:#9a8a80;letter-spacing:0.05em;">
+    * B&B = Bed &amp; Breakfast · Half-Board = Breakfast + Dinner · Full-Board = All Meals Included. Children may be accommodated in existing beds; additional fees may apply.
+  </div>
+</section>
+
+<!-- DINING -->
+<section id="dining">
+  <div class="dining-inner">
+    <div class="dining-info">
+      <div class="section-label">Restaurant & Bar</div>
+      <h2 class="section-title" style="color:var(--cream);">Eat, Drink &<br><em>Savour</em></h2>
+      <p class="section-body" style="margin-top:1.5rem;">
+        Come indulge your senses at Northgate Resort. Our talented kitchen and bar team work hard year-round to create inspired menus drawing from the rich culinary traditions of Kenya and beyond.
+      </p>
+      <div class="dining-highlight">
+        "They serve breakfast for kings... The food is excellent! I loved the wet fried goat meat."<br>— Verified Guest Review
+      </div>
+      <div style="margin-top: 2rem;">
+        <div style="font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Dining Options</div>
+        <div style="display:grid;gap:0.6rem;">
+          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🌅 Garden Alfresco Breakfast</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🍖 Outdoor Private Grilling (Campsite)</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🌿 Outdoor Patio Dining</div>
+          <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.8rem;color:rgba(245,237,216,0.75);">🥃 Texas Tavern Lounge Bar</div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-panel">
+      <div class="menu-tabs">
+        <button class="menu-tab active" onclick="showTab('breakfast')">Breakfast</button>
+        <button class="menu-tab" onclick="showTab('mains')">Mains</button>
+        <button class="menu-tab" onclick="showTab('grills')">Grills</button>
+        <button class="menu-tab" onclick="showTab('bar')">Bar</button>
+      </div>
+      <div class="menu-content active" id="tab-breakfast">
+        <div class="menu-section-title">Morning Selections</div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Full English Breakfast</div>
+            <span class="menu-item-desc">Eggs, bacon, sausage, beans, toast & juice</span>
+          </div>
+          <span class="menu-item-price">Ksh 850</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Kenyan Traditional Breakfast</div>
+            <span class="menu-item-desc">Uji, mandazi, eggs, chai & seasonal fruits</span>
+          </div>
+          <span class="menu-item-price">Ksh 650</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Continental Spread</div>
+            <span class="menu-item-desc">Croissants, fresh fruits, yoghurt & coffee</span>
+          </div>
+          <span class="menu-item-price">Ksh 700</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Omelette Station</div>
+            <span class="menu-item-desc">Customized with peppers, cheese & mushrooms</span>
+          </div>
+          <span class="menu-item-price">Ksh 500</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Avocado Toast</div>
+            <span class="menu-item-desc">Sourdough, fresh avo, poached eggs & chilli</span>
+          </div>
+          <span class="menu-item-price">Ksh 600</span>
+        </div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(200,151,58,0.15);font-size:0.7rem;color:rgba(245,237,216,0.4);font-style:italic;">
+          Breakfast included for B&B, Half-Board & Full-Board guests
+        </div>
+      </div>
+      <div class="menu-content" id="tab-mains">
+        <div class="menu-section-title">Traditional & Continental</div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Nyama Choma</div>
+            <span class="menu-item-desc">Roasted goat or beef, ugali & kachumbari</span>
+          </div>
+          <span class="menu-item-price">Ksh 1,200</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Wet Fried Goat Meat</div>
+            <span class="menu-item-desc">Slow-cooked in rich sauce — a guest favourite</span>
+          </div>
+          <span class="menu-item-price">Ksh 1,100</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Pilau Rice</div>
+            <span class="menu-item-desc">Aromatic spiced rice with beef or chicken</span>
+          </div>
+          <span class="menu-item-price">Ksh 750</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Grilled Tilapia</div>
+            <span class="menu-item-desc">With ugali, sukuma wiki & lemon</span>
+          </div>
+          <span class="menu-item-price">Ksh 950</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Pasta Primavera</div>
+            <span class="menu-item-desc">Continental pasta with seasonal vegetables</span>
+          </div>
+          <span class="menu-item-price">Ksh 800</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Chicken Stew</div>
+            <span class="menu-item-desc">Home-style with chapati or rice</span>
+          </div>
+          <span class="menu-item-price">Ksh 850</span>
+        </div>
+      </div>
+      <div class="menu-content" id="tab-grills">
+        <div class="menu-section-title">Outdoor Grill & BBQ</div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">BBQ Ribs</div>
+            <span class="menu-item-desc">Slow smoked pork ribs with house sauce</span>
+          </div>
+          <span class="menu-item-price">Ksh 1,500</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Mixed Grill Platter</div>
+            <span class="menu-item-desc">Beef, chicken, lamb & sausage, chips & salad</span>
+          </div>
+          <span class="menu-item-price">Ksh 2,200</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Grilled Chicken Quarters</div>
+            <span class="menu-item-desc">Marinated overnight with herb butter</span>
+          </div>
+          <span class="menu-item-price">Ksh 900</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Private Campfire Grill</div>
+            <span class="menu-item-desc">Self-grilling package for campsite residents</span>
+          </div>
+          <span class="menu-item-price">From Ksh 1,800</span>
+        </div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(200,151,58,0.15);font-size:0.7rem;color:rgba(245,237,216,0.4);font-style:italic;">
+          ✦ Self-outdoor grilling is exclusively available for campsite guests
+        </div>
+      </div>
+      <div class="menu-content" id="tab-bar">
+        <div class="menu-section-title">Texas Tavern Lounge Bar</div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Tusker / White Cap Lager</div>
+            <span class="menu-item-desc">Cold draft beer · Kenyan classic</span>
+          </div>
+          <span class="menu-item-price">Ksh 350</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Dawa Cocktail</div>
+            <span class="menu-item-desc">Vodka, honey, lime — Kenya's signature cocktail</span>
+          </div>
+          <span class="menu-item-price">Ksh 700</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Savanna Sunset</div>
+            <span class="menu-item-desc">Gin, passion, ginger & tonic</span>
+          </div>
+          <span class="menu-item-price">Ksh 750</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Fresh Tropical Juice</div>
+            <span class="menu-item-desc">Mango, passion, watermelon or mixed</span>
+          </div>
+          <span class="menu-item-price">Ksh 300</span>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Kenyan Tea / Coffee</div>
+            <span class="menu-item-desc">Masala chai, black or with milk</span>
+          </div>
+          <span class="menu-item-price">Ksh 180</span>
+        </div>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(200,151,58,0.15);font-size:0.7rem;color:rgba(245,237,216,0.4);font-style:italic;">
+          * Menu items & prices are indicative. Please confirm with staff.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experiences">
+  <div class="exp-inner">
+    <div class="exp-header">
+      <div>
+        <div class="section-label">Things To Do</div>
+        <h2 class="section-title">Unforgettable<br><em>Experiences</em></h2>
+      </div>
+      <p class="section-body">From thrilling game drives across Northern Kenya's iconic reserves to peaceful nature walks along River Kisima — every day at Northgate holds a new adventure.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <span class="exp-icon">🦁</span>
+        <h3 class="exp-card-title">Game Drives</h3>
+        <p class="exp-card-desc">Explore Samburu National Reserve and Buffalo Springs — home to the Samburu Special Five: Grevy's zebra, reticulated giraffe, beisa oryx, Somali ostrich & gerenuk.</p>
+        <div class="exp-price">From Ksh 3,500 per person</div>
+      </div>
+      <div class="exp-card">
+        <span class="exp-icon">🌊</span>
+        <h3 class="exp-card-title">Nature Walk</h3>
+        <p class="exp-card-desc">Walk with a guide to discover the magical springs of River Kisima — cool, crystal-clear water flowing through dramatic rock formations.</p>
+        <div class="exp-price">Ksh 500 per person</div>
+      </div>
+      <div class="exp-card">
+        <span class="exp-icon">🏊</span>
+        <h3 class="exp-card-title">Olympic Pool</h3>
+        <p class="exp-card-desc">Relax and cool off in our state-of-the-art Olympic-size swimming pool surrounded by lush, manicured gardens. Open to all guests.</p>
+        <div class="exp-price">Included for Guests · Day Pass Available</div>
+      </div>
+      <div class="exp-card">
+        <span class="exp-icon">📸</span>
+        <h3 class="exp-card-title">Photoshoots</h3>
+        <p class="exp-card-desc">Our resort's beautiful grounds — gardens, pools and rustic tented areas — make a stunning backdrop for professional photoshoots and creative sessions.</p>
+        <div class="exp-price">Contact for Rates</div>
+      </div>
+      <div class="exp-card">
+        <span class="exp-icon">👨‍👩‍👧</span>
+        <h3 class="exp-card-title">Family Day Out</h3>
+        <p class="exp-card-desc">Kids' corner with a playground, pool access and family-friendly dining. A perfect weekend destination for families in Northern Kenya.</p>
+        <div class="exp-price">Day Entry Available</div>
+      </div>
+      <div class="exp-card">
+        <span class="exp-icon">🤝</span>
+        <h3 class="exp-card-title">Team Building</h3>
+        <p class="exp-card-desc">Well-suited for corporate retreats, team building events and group activities. Our event grounds and gardens provide ample space for outdoor programmes.</p>
+        <div class="exp-price">Custom Packages Available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="events-inner">
+    <div>
+      <div class="section-label">Events & Conferences</div>
+      <h2 class="section-title">Your Perfect<br><em>Venue</em></h2>
+      <p class="section-body" style="margin-top:1.2rem;">
+        Northgate Resort is proud to offer a selection of spaces and services suitable for every kind of event or celebration — from intimate gatherings to large corporate conferences.
+      </p>
+      <ul class="events-list">
+        <li>State-of-the-art conference rooms for both small and large gatherings</li>
+        <li>Business centre with meeting rooms and A/V equipment</li>
+        <li>Dedicated event grounds with spacious gardens for outdoor functions</li>
+        <li>Full catering service — breakfast, lunch, dinner & refreshments</li>
+        <li>Wedding & celebration venue with logistics specialists</li>
+        <li>Team building programmes and corporate retreat packages</li>
+        <li>Multi-lingual staff (English & Swahili) to assist delegates</li>
+        <li>Accommodation packages for conference delegates</li>
+      </ul>
+      <a href="{% url 'events' %}" class="btn-primary" style="display:inline-block;margin-top:1.5rem;background: var(--gold); color: var(--charcoal);">Enquire About Events</a>
+    </div>
+    <div class="events-visual">
+      <span class="events-emoji">🏛️</span>
+      <div class="events-tagline">Host your next event at <em>Northgate</em></div>
+      <p class="events-note">
+        Contact our logistics specialists to hear more about our conference rooms, event halls, catering services, gardens and additional bespoke solutions for your occasion.
+      </p>
+      <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(200,151,58,0.2);">
+        <div style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.8rem;">Direct Contact</div>
+        <div style="font-size:0.82rem;color:rgba(245,237,216,0.75);line-height:1.8;">
+          📞 0799-268-366<br>
+          📞 0786-089-065<br>
+          ✉️ info.northgateresortisiolo@gmail.com
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-label" style="justify-content:center;">Guest Reviews</div>
+    <h2 class="section-title" style="color:var(--cream);">What Our <em>Guests</em> Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">I absolutely love the green manicured gardens, the cool swimming pool and the accommodation. The tented camps and rooms are so clean and comfortable. The food is excellent! I will definitely return.</p>
+        <div class="testimonial-author">Verified Guest · TripAdvisor</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">A rare gem in Isiolo County! Northgate provides unique facilities to relax and take in the beauty of this serene environment. Located at the outskirts of town, surrounded by breathtaking parks — truly unforgettable.</p>
+        <div class="testimonial-author">Verified Guest · TripAdvisor</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">We had a great Valentine's weekend here. The tented camp is very comfortable and quiet — I loved the skylight bathrooms. The food and service were great, and the game drives in nearby parks were a wonderful pastime.</p>
+        <div class="testimonial-author">Verified Guest · Google</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Had an opportunity to stay in the new rooms a week ago and I was impressed. Spacious, clean and elegant. Price is also perfect for such a facility. I will definitely be back — keep up the good work!</p>
+        <div class="testimonial-author">Narmowen S. · Verified Guest</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★☆</div>
+        <p class="testimonial-text">Extremely accessible with a tarmac road leading right up to the gate. Excellent service, food and staff! State-of-the-art playground and Olympic size swimming pool. It is a hidden gem in Isiolo County.</p>
+        <div class="testimonial-author">Verified Guest · TripAdvisor</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">The rooms are heavenly, the services and the staff are exceptional. I love how the place is reserved and tranquil. It is a place I will sure revisit. The booking was seamless too!</p>
+        <div class="testimonial-author">Verified Guest · Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK BANNER -->
+<div class="book-banner" id="book">
+  <h2>Ready to Experience Northgate?</h2>
+  <p>Book your stay directly and enjoy our best available rates</p>
+  <div class="book-form">
+    <input type="text" placeholder="Your Name">
+    <input type="date">
+    <select>
+      <option value="">Room Type</option>
+      <option>Luxury Tented Campsite</option>
+      <option>Luxury Cottage Room</option>
+    </select>
+    <select>
+      <option value="">Board Type</option>
+      <option>B&B</option>
+      <option>Half-Board</option>
+      <option>Full-Board</option>
+    </select>
+    <button onclick="bookNow()">Enquire Now</button>
+  </div>
+</div>
+
+<!-- LOCATION & CONTACT -->
+<section id="location">
+  <div class="location-inner">
+    <div>
+      <div class="section-label">Find Us</div>
+      <h2 class="section-title">Location &<br><em>Getting Here</em></h2>
+      <p class="section-body" style="margin-top:1.2rem;">Conveniently located on Airport Road, Isiolo — directly opposite the proposed International Airport and just 2km from Isiolo town centre. Accessible by tarmac road all the way to our gate.</p>
+      <ul class="nearby-list">
+        <li><span>Isiolo Town Centre</span><span>2 km</span></li>
+        <li><span>Isiolo International Airport</span><span>Adjacent</span></li>
+        <li><span>Leparua Community Conservancy</span><span>16.2 km</span></li>
+        <li><span>Buffalo Springs National Reserve</span><span>24.9 km</span></li>
+        <li><span>Ngare Ndare Forest Park</span><span>28.5 km</span></li>
+        <li><span>Samburu National Reserve</span><span>~30 km</span></li>
+        <li><span>River Kisima Springs</span><span>Nearby</span></li>
+        <li><span>Nairobi (via A2)</span><span>~280 km</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Contact <em>Us</em></h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-value">Airport Road, Isiolo, Kenya<br>P.O Box 60300</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">
+              <a href="tel:+254799268366">0799-268-366</a> &nbsp;|&nbsp;
+              <a href="tel:+254786089065">0786-089-065</a><br>
+              <a href="tel:+254722360839">0722-360-839</a> &nbsp;|&nbsp;
+              <a href="tel:+254729624532">0729-624-532</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:info.northgateresortisiolo@gmail.com">info.northgateresortisiolo@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Reception Hours</div>
+            <div class="contact-value">Open 24 Hours · 7 Days a Week</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📲</div>
+          <div>
+            <div class="contact-label">Social Media</div>
+            <div class="contact-value">
+              <a href="https://instagram.com/northgateresort_isiolo" target="_blank">@northgateresort_isiolo</a> on Instagram<br>
+              <a href="https://facebook.com/northgateresort" target="_blank">Northgate Resort</a> on Facebook
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

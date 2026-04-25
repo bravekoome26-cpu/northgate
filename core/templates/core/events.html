@@ -1,0 +1,66 @@
+{% extends 'core/base.html' %}
+{% block title %}Events & Conferences at Northgate Resort{% endblock %}
+{% block content %}
+<section style="padding: 5rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="section-label">Events</div>
+    <h1 class="section-title">A warm, professional venue for meetings, weddings and celebrations.</h1>
+    <p class="section-body" style="margin-top: 1.5rem; max-width: 760px;">
+      Northgate Resort provides flexible event spaces, reliable catering and attentive support for both corporate and private gatherings. Our location near the airport makes planning travel simple for guests and delegates.
+    </p>
+  </div>
+</section>
+
+<section class="events-inner" style="padding: 4rem 0; background: rgba(245,237,216,0.94);">
+  <div>
+    <div class="events-list">
+      <li>Large conference hall with flexible seating for up to 120 guests</li>
+      <li>Private meeting rooms for workshops and breakout sessions</li>
+      <li>Outdoor garden functions for weddings, receptions and launch events</li>
+      <li>Professional A/V equipment and Wi-Fi support</li>
+      <li>Custom catering packages for breakfast, lunch, dinner and refreshments</li>
+      <li>Dedicated event coordinator to assist with planning</li>
+      <li>Guest accommodation packages for delegates and families</li>
+      <li>Reliable transportation coordination to and from the airport</li>
+    </div>
+  </div>
+  <div class="events-visual" style="padding: 3rem;">
+    <span class="events-emoji">🏛️</span>
+    <div class="events-tagline">Professional service made simple.</div>
+    <p class="events-note">Tell our event team your plans and we will help you design the menu, layout and schedule for a seamless and memorable occasion.</p>
+    <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(200,151,58,0.15); color: rgba(245,237,216,0.85);">
+      <div style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.8rem;">Event Services</div>
+      <div style="line-height:1.8;">
+        Conference planning · Wedding coordination · Business retreats · Catering design · Audio/visual support · Transportation & logistics
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 4rem 0;">
+  <div style="max-width: 1100px; margin: 0 auto; display: grid; gap: 2rem;">
+    <div style="background: var(--cream); padding: 2.2rem; border-radius: 1.5rem;">
+      <h2 style="margin-bottom:1rem;">Conference Packages</h2>
+      <p style="line-height:1.8; color:#5a4d42;">Our event packages are designed for both small team meetings and larger corporate conferences. Package details are available on request and can include room blocks, meals, AV support and private transport.</p>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem;">
+      <div style="background: var(--forest); color: var(--cream); padding: 1.8rem; border-radius: 1.5rem;">
+        <h3 style="margin-bottom:0.8rem;">Weddings</h3>
+        <p style="line-height:1.8;">Garden venues and elegant cottages make a beautiful setting for ceremonies, receptions and family celebrations.</p>
+      </div>
+      <div style="background: var(--forest); color: var(--cream); padding: 1.8rem; border-radius: 1.5rem;">
+        <h3 style="margin-bottom:0.8rem;">Meetings</h3>
+        <p style="line-height:1.8;">Private rooms, strong internet and attentive service support focused business gatherings.</p>
+      </div>
+      <div style="background: var(--forest); color: var(--cream); padding: 1.8rem; border-radius: 1.5rem;">
+        <h3 style="margin-bottom:0.8rem;">Celebrations</h3>
+        <p style="line-height:1.8;">Birthdays, anniversaries and special dinners are easy to host with flexible catering and event coordination.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 3rem 0; text-align:center;">
+  <a href="{% url 'table_reservation' %}" class="btn-primary">Reserve your event space</a>
+</section>
+{% endblock %}

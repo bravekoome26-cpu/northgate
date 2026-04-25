@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Northgate Resort Isiolo — Gateway to the Great North{% endblock %}</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Pu3msCKS2npv+VkdW40MiwQ+R2QvjW70ZcZx3B3G5tXO4ZdxH18ncVFFKb9+NN8QX6hQ2mzH1i0V+NGjaP/TV0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{% static 'css/site.css' %}" />
+{% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="{% url 'home' %}" class="nav-logo">
+    Northgate Resort
+    <span>Isiolo · Kenya</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'room_list' %}">Rooms</a></li>
+    <li><a href="{% url 'food_menu' %}">Dining</a></li>
+    <li><a href="{% url 'packages' %}">Packages</a></li>
+    <li><a href="{% url 'experiences' %}">Experiences</a></li>
+    <li><a href="{% url 'events' %}">Events</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    {% if user.is_staff %}
+        <li><a href="/admin/">Admin</a></li>
+    {% endif %}
+    {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}" class="nav-book">Logout</a></li>
+    {% else %}
+        <li><a href="{% url 'login' %}" class="nav-book">Login</a></li>
+    {% endif %}
+  </ul>
+</nav>
+<main class="site-main">
+    <div class="container-fluid px-4 py-5">
+        {% if messages %}
+            <div class="mb-4">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="container px-lg-5">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Northgate Resort</div>
+      <div class="footer-brand-sub">Isiolo, Kenya</div>
+      <p class="footer-brand-desc">Where dining, lounging, photoshoots, events, conferencing, team-building, swimming, play, rooms, camping, and glamping meet in perfect harmony — at the Gateway to the Great North.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'room_list' %}">Rooms</a></li>
+        <li><a href="{% url 'food_menu' %}">Dining</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="{% url 'table_reservation' %}">Events</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="{% url 'room_list' %}">Accommodation</a></li>
+        <li><a href="{% url 'room_list' %}">Luxury Glamping</a></li>
+        <li><a href="{% url 'table_reservation' %}">Conferencing</a></li>
+        <li><a href="#experiences">Game Drives</a></li>
+        <li><a href="#experiences">Photoshoots</a></li>
+        <li><a href="#experiences">Family Day Out</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:+254799268366">0799-268-366</a></li>
+        <li><a href="tel:+254786089065">0786-089-065</a></li>
+        <li><a href="mailto:info.northgateresortisiolo@gmail.com">Email Us</a></li>
+        <li><a href="https://instagram.com/northgateresort_isiolo">Instagram</a></li>
+        <li><a href="https://facebook.com/northgateresort">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© {% now "Y" %} Northgate Resort Isiolo. Airport Road, Isiolo, Kenya 60300.</div>
+    <div>Made with ♥ for the <a href="#hero">Great North</a></div>
+  </div>
+</footer>
+<script>
+  function showTab(tab) {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-content').forEach(c => c.classList.remove('active'));
+    event.target.classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+  }
+
+  function bookNow() {
+    alert('Thank you for your interest in Northgate Resort!\n\nPlease contact us to confirm your booking:\n📞 0799-268-366\n✉️ info.northgateresortisiolo@gmail.com\n\nWe look forward to welcoming you!');
+  }
+
+  // Smooth nav background on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.background = window.scrollY > 80
+      ? 'rgba(10,18,13,0.97)'
+      : 'rgba(26,46,38,0.92)';
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.room-card, .exp-card, .testimonial-card, .contact-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

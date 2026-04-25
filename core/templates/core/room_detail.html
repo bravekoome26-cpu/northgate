@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% block title %}{{ room.name }} · North Gate Resort{% endblock %}
+{% block content %}
+<div class="page-header mb-4">
+    <h1 class="h2">{{ room.name }}</h1>
+    <p class="text-muted">{{ room.room_type }} — elegant comfort for visitors to Isiolo.</p>
+</div>
+<div class="row gy-4">
+    <div class="col-lg-7">
+        <div class="card content-panel shadow-sm overflow-hidden">
+            <div class="room-detail-hero rounded-top"></div>
+            <div class="card-body">
+                <p class="mb-4">{{ room.description }}</p>
+                <p class="mb-2"><strong>Price:</strong> <span class="text-gold">${{ room.price }}</span> / night</p>
+                <p class="mb-0"><strong>Status:</strong> {% if room.is_available %}<span class="text-success">Available</span>{% else %}<span class="text-danger">Unavailable</span>{% endif %}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="card content-panel form-card shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 mb-3">Book this room</h2>
+                {% if room.is_available %}
+                    {% if user.is_authenticated %}
+                        <form method="post" class="row g-3">
+                            {% csrf_token %}
+                            <div class="col-12">{{ form.check_in.label_tag }} {{ form.check_in }}</div>
+                            <div class="col-12">{{ form.check_out.label_tag }} {{ form.check_out }}</div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-gold w-100">Reserve now</button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <p>Please <a href="{% url 'login' %}?next={{ request.path }}">log in</a> to reserve this room.</p>
+                    {% endif %}
+                {% else %}
+                    <div class="alert alert-warning">This room is currently unavailable.</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
